@@ -24,11 +24,11 @@
         mode: "0777"
       
     - name: Write Exports Config 
-      lineinefile: 
+      lineinfile: 
         path: /etc/exports 
         line: "{{ nfs_export_dir}}  {{nfs_client_ip }} (rw,sync,no_subtree_check)"
-        create: yes 
-        state: yes 
+        create: yes
+        state: present 
     - name: Apply configuration 
       command: exportfs -ra
     - name: Restart nfs-server service 
