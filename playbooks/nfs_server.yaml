@@ -26,7 +26,7 @@
     - name: Write Exports Config 
       lineinfile: 
         path: /etc/exports 
-        line: "{{ nfs_export_dir}}  {{nfs_client_ip }} (rw,sync,no_subtree_check)"
+        line: "{{ nfs_export_dir}}  {{nfs_client_ip }}(rw,sync,no_subtree_check,no_root_squash)"
         create: yes
         state: present 
     - name: Apply configuration 
