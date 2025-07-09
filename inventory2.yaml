@@ -2,11 +2,13 @@ all:
   hosts: {}
 
   children: 
-    dev: 
+    nfs-servers: 
       hosts:  
         vm-one:
           ansible_user: vagrant
           ansible_host: 192.168.56.10
+    nfs-clients: 
+      hosts: 
         vm-two: 
           ansible_user: vagrant 
           ansible_host: 192.168.56.11
