@@ -1,0 +1,14 @@
+---
+- name: Deploy spring service 
+  hosts: vm-two 
+  become: true 
+  tasks: 
+  - name: Copy docker compose file 
+    copy: 
+      src: docker-compose.yaml
+      dest: /opt/docker-compose.yaml 
+
+  - name: Run docker compose 
+    command: docker-compose up -d 
+    args: 
+      chdir: /opt 
