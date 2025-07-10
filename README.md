@@ -54,3 +54,11 @@ vagrant up
 ansible -i inventory.ini all -m ping
 ansible -i inventory.ini nfs-network -m ping 
 ```
+
+
+
+
+## Deploy service with the data persistence 
+```bash
+docker pull 69966/springgradleimg:1.1.1
+```
