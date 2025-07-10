@@ -1,0 +1,10 @@
+---
+- name: Create Infrastructure 
+  hosts: localhost 
+  become: true 
+
+  vars_file: 
+    - vars/vm_machines.yaml 
+  
+  tasks: 
+    - name: 
