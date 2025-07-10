@@ -1,2 +1,5 @@
 machine-one/.vagrant
 machine-two/.vagrant
+
+# ignore the pub key 
+vagrant_vms/shared/id_rsa.pub
